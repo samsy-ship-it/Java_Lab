@@ -1,0 +1,29 @@
+class AreaCalculator {
+
+    
+    double area(double radius) {
+        return Math.PI * radius * radius;
+    }
+
+    
+    double area(double length, double width) {
+        return length * width;
+    }
+
+    
+    double area(float base, float height) {
+        return 0.5 * base * height;
+    }
+
+    public static void main(String[] args) {
+        AreaCalculator obj = new AreaCalculator();
+
+        double circleArea = obj.area(5); // radius = 5
+        double rectangleArea = obj.area(4, 6); // length = 4, width = 6
+        double triangleArea = obj.area(3f, 4f); // base = 3, height = 4
+
+        System.out.println("Area of Circle: " + circleArea);
+        System.out.println("Area of Rectangle: " + rectangleArea);
+        System.out.println("Area of Triangle: " + triangleArea);
+    }
+}
